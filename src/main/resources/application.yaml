@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ledger-engine
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger_db
+    username: ledger_user
+    password: Sivasaran@2003
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
